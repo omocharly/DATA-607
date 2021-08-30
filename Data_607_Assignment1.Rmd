@@ -1,0 +1,57 @@
+
+### Title: CUNY SPS MDS Data_607_Assignment1"
+### Author: Charles Ugiagbe
+### Date: "8/29/2021"
+
+
+#### Introduction
+This data is about [The Economic Guide to picking a college Major](https://raw.githubusercontent.com/omocharly/DATA-607/main/grad-students.csv)  
+The data shows numbers of graduate from different college major and their employment rate
+we try to see the employment rate of each college major.
+
+
+#### Load the required libraries
+```{r load library}
+library(tidyverse)
+```
+
+#### Read Files
+This reads the file from github into a tibble (dataframe) and check the head to have an idea of the data
+```{r Read Head data}
+url <- "https://raw.githubusercontent.com/omocharly/DATA-607/main/grad-students.csv"
+grad_students <- read.csv(url)
+head(grad_students) # read the file into a tibble
+```
+##### Columns
+Explore the data set to see the names of each columns
+```{r Colnames}
+colnames(grad_students)
+```
+#### Structure
+Check the Structure of the data
+```{r structure}
+str(grad_students)
+```
+
+
+```{r}
+
+```
+
+#### Subset the data
+Subset the original data "grad_students" by using dplyr
+```{r subset}
+grad_students_Subset <- select(grad_students, Major_code:Grad_unemployment_rate)
+head(grad_students_Subset)
+```
+#### Check the Summary
+Check the descriptive Statistics Summary
+```{r Summary}
+summary(grad_students)
+
+```
+
+
+## R Markdown
+
+
